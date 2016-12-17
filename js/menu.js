@@ -13,7 +13,7 @@
         if (!subItemsArray[subItemsIndex].classList.contains('show-sub-item')) {
             subItemsArray[subItemsIndex].classList.add('show-sub-item');
             if (_lastIndex != null) {
-                subItemsArray[_lastIndex].classList.remove('show-sub-item');
+                if(_lastIndex != subItemsIndex) subItemsArray[_lastIndex].classList.remove('show-sub-item');
             }
             _lastIndex = subItemsIndex;
         } else {
