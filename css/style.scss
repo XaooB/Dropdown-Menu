@@ -1,0 +1,48 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Aller';
+  color: white
+}
+
+.container {
+  width: 1200px;
+  margin: 0 auto;
+
+  .nav-wrapper {
+    .nav-item {
+      width: 200px;
+      float: left;
+      background: crimson;
+      text-align: center;
+      margin-right: 1px;
+      cursor: pointer;
+      transition: all .3s linear;
+      &:hover {
+        background: firebrick;
+        transition: all .3s linear;
+      }
+      a {
+        display: inline-block;
+        width: 200px;
+        padding: 10px;
+        color: white;
+        text-decoration: none;
+      }
+
+      .sub-item {
+        display: none;
+        .item {
+          @extend .nav-item;
+        }
+      }
+
+      .show-sub-item {
+        display: block;
+      }
+    }
+  }
+}
